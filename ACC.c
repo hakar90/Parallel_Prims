@@ -3,9 +3,7 @@
 #include <limits.h>
 #include <omp.h>
 #include <time.h>
-
-
-
+#define V 100
 int minKey(int key[], int visited[]) {
     int min = INT_MAX, index;
 #pragma acc parallel loop reduction(min:min) num_gangs(32) vector_length(256)
@@ -16,7 +14,7 @@ int minKey(int key[], int visited[]) {
         }
     }
     return index;
-}#define V 10
+}
 
 void printMST(int from[], int n, int **graph) {
     printf("Edge   Weight\n");
