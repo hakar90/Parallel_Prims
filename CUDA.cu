@@ -3,7 +3,7 @@
 #include <limits.h>
 #include <stdbool.h>
 #include <time.h>
-
+#define V 100
 #define INF INT_MAX
 
 __global__ void primMST(int *graph, int *parent, bool *mstSet, int *key) {
@@ -20,8 +20,7 @@ __global__ void primMST(int *graph, int *parent, bool *mstSet, int *key) {
         }
                 
     }
-}#define V 100
-
+}
 
 void printMST(int parent[], int graph[V][V]) {
     printf("Edge \tWeight\n");
