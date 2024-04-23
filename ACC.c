@@ -4,7 +4,7 @@
 #include <omp.h>
 #include <time.h>
 
-#define V 10000
+
 
 int minKey(int key[], int visited[]) {
     int min = INT_MAX, index;
@@ -16,7 +16,7 @@ int minKey(int key[], int visited[]) {
         }
     }
     return index;
-}
+}#define V 10
 
 void printMST(int from[], int n, int **graph) {
     printf("Edge   Weight\n");
